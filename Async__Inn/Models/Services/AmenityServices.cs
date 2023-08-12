@@ -11,7 +11,7 @@ namespace Async__Inn.Models.Services
     /// </summary>
     public class AmenityServices : IAmenity
     {
-        private readonly AsyncInnDbContext _context;
+         private readonly AsyncInnDbContext _context;
 
         /// <summary>
         /// Initializes a new instance of the AmenityServices class.

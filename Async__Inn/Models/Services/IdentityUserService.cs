@@ -9,7 +9,7 @@ namespace Async__Inn.Models.Services
     {
         private UserManager<ApplicationUser> userManager;
 
-        public IdentityUserService(UserManager<ApplicationUser> manager)
+         public IdentityUserService(UserManager<ApplicationUser> manager)
         {
             userManager = manager;
         }
