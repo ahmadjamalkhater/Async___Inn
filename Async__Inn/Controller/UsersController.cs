@@ -7,7 +7,7 @@ namespace Async__Inn.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+     public class UsersController : ControllerBase
     {
         private IUser userService;
         public UsersController(IUser service)

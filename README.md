@@ -3,7 +3,7 @@
 ## Introduction
 Welcome to Async Inn Management System! This web application is designed to manage hotels, rooms, and amenities for a hotel chain. It allows users to perform basic CRUD operations on hotels, rooms, and amenities through a RESTful API.
 
-![ERD1](./Async__Inn-Lab14/Async__Inn/ERD1)
+![ERD1](./Async__Inn-Lab18/assets/ERD1.ipg)
 
 ## Entity-Relationship Diagram (ERD)
 The application's database schema is represented by the following ERD:
