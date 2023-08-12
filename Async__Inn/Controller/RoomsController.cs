@@ -10,8 +10,8 @@ using Async__Inn.Models;
 using Async__Inn.Models.Interfaces;
 using Async__Inn.Models.DTO;
 
-namespace Async__Inn.Controller  
-{ 
+namespace Async__Inn.Controller
+{
     [Route("api/[controller]")]
     [ApiController]
     public class RoomsController : ControllerBase
@@ -97,7 +97,7 @@ namespace Async__Inn.Controller
             return NoContent();
         }
 
-        
+
 
         [HttpDelete]
         [Route("{roomId}/Amenity/{amenityId}")]
