@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Async__Inn.Migrations
 {
     /// <inheritdoc />
-    public partial class thardmigration : Migration
+    public partial class ddd : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -265,6 +265,16 @@ namespace Async__Inn.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "agent", "00000000-0000-0000-0000-000000000000", "Agent", "AGENT" },
+                    { "districtmanager", "00000000-0000-0000-0000-000000000000", "DistrictManager", "DISTRICTMANAGER" },
+                    { "propertymanager", "00000000-0000-0000-0000-000000000000", "PropertyManager", "PROPERTYMANAGER" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Hotels",
                 columns: new[] { "ID", "City", "Country", "Name", "Phone", "State", "StreetAdress" },
                 values: new object[,]
@@ -282,6 +292,16 @@ namespace Async__Inn.Migrations
                     { 1, 20, "Bedroom" },
                     { 2, 30, "livingroom" },
                     { 3, 10, "Kitchen" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetRoleClaims",
+                columns: new[] { "Id", "ClaimType", "ClaimValue", "RoleId" },
+                values: new object[,]
+                {
+                    { 4, "permissions", "create", "districtmanager" },
+                    { 5, "permissions", "update", "districtmanager" },
+                    { 6, "permissions", "delete", "districtmanager" }
                 });
 
             migrationBuilder.CreateIndex(

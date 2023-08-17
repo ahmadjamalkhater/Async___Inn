@@ -299,6 +299,29 @@ namespace Async__Inn.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "districtmanager",
+                            ConcurrencyStamp = "00000000-0000-0000-0000-000000000000",
+                            Name = "DistrictManager",
+                            NormalizedName = "DISTRICTMANAGER"
+                        },
+                        new
+                        {
+                            Id = "propertymanager",
+                            ConcurrencyStamp = "00000000-0000-0000-0000-000000000000",
+                            Name = "PropertyManager",
+                            NormalizedName = "PROPERTYMANAGER"
+                        },
+                        new
+                        {
+                            Id = "agent",
+                            ConcurrencyStamp = "00000000-0000-0000-0000-000000000000",
+                            Name = "Agent",
+                            NormalizedName = "AGENT"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -324,6 +347,29 @@ namespace Async__Inn.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetRoleClaims", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 4,
+                            ClaimType = "permissions",
+                            ClaimValue = "create",
+                            RoleId = "districtmanager"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            ClaimType = "permissions",
+                            ClaimValue = "update",
+                            RoleId = "districtmanager"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            ClaimType = "permissions",
+                            ClaimValue = "delete",
+                            RoleId = "districtmanager"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
