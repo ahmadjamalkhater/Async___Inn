@@ -32,27 +32,19 @@ namespace Async__Inn.Data
                 new Room() { ID = 3, Name = "buisiness center" }
                 );
 
-            SeedRole(modelBuilder, "District Manager",
-                "hotel.create", "hotel.read", "hotel.update", "hotel.delete",
-                "hotelroom.create", "hotelroom.read", "hotelroom.update", "hotelroom.delete",
-                "room.create", "room.read", "room.update", "room.delete",
-                "amenity.create", "amenity.read", "amenity.update", "amenity.delete",
-                "role.create");
 
 
-            SeedRole(modelBuilder, "Property Manager",
-                "hotelroom.create", "hotelroom.read", "hotelroom.update",
-                "amenity.create", "amenity.read", "amenity.update",
-                "role.create.agent");
 
 
-            SeedRole(modelBuilder, "Agent",
-                "hotelroom.read", "hotelroom.update",
-                "amenity.create", "amenity.delete");
+
+            SeedRole(modelBuilder, "DistrictManager", "create", "update", "delete");
+            SeedRole(modelBuilder, "PropertyManager");
+            SeedRole(modelBuilder, "Agent");
+            
 
 
-            SeedRole(modelBuilder, "Anonymous",
-                "hotel.read", "hotelroom.read", "room.read", "amenity.read");
+
+
 
 
             modelBuilder.Entity<HotelRoom>().HasKey(
